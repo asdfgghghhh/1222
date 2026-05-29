@@ -5,35 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>台灣美光記憶體股份有限公司企業工會章程</title>
 <style>
-    body { font-family: "Microsoft JhengHei", sans-serif; margin: 0; background: #f5f6fa; display: flex; }
-    /* 側邊導覽列樣式 */
-    .sidebar { width: 220px; background: #fff; height: 100vh; position: fixed; border-right: 1px solid #ddd; padding: 20px; box-sizing: border-box; overflow-y: auto; }
-    .container { margin-left: 240px; width: calc(100% - 260px); padding: 20px; }
-    
+    body { font-family: "Microsoft JhengHei", sans-serif; margin: 0; background: #f5f6fa; }
+    .container { max-width: 800px; margin: 20px auto; padding: 20px; }
+    .header { text-align: center; margin-bottom: 20px; }
     button { padding: 10px 15px; margin: 5px; border: none; border-radius: 8px; background: #1976d2; color: #fff; cursor: pointer; }
     button:hover { background: #1565c0; }
-    
-    .chapter { border: 1px solid #ddd; border-radius: 8px; margin-top: 15px; background: #fff; }
-    .chapter summary { padding: 15px; font-weight: bold; cursor: pointer; background: #eef4ff; border-radius: 8px; }
-    .article { padding: 10px 15px; border-top: 1px dashed #ddd; }
-    
-    .nav-link { display: block; padding: 8px 0; color: #333; text-decoration: none; font-size: 14px; }
-    .nav-link:hover { color: #1976d2; }
+    .chapter { border: 1px solid #ddd; border-radius: 8px; margin-top: 15px; background: #fff; overflow: hidden; }
+    .chapter summary { padding: 15px; font-weight: bold; cursor: pointer; background: #eef4ff; list-style: none; }
+    .chapter summary::after { content: ' ▼'; float: right; }
+    .chapter[open] summary::after { content: ' ▲'; }
+    .article { padding: 15px; border-top: 1px dashed #ddd; line-height: 1.6; }
 </style>
 </head>
 <body>
+
 <div class="container">
-    <!-- 標題與 Logo 區塊 -->
-    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
-        <img src="S__42958893.jpg" alt="工會Logo" style="width: 80px; height: auto; object-fit: contain;">
-        <h2 style="margin: 0;">台灣美光記憶體股份有限公司企業工會章程</h2>
+    <div class="header">
+        <h2>台灣美光記憶體股份有限公司企業工會章程</h2>
     </div>
 
-    <!-- 按鈕區塊 -->
     <div>
-        <button onclick="expandAll()">展開全部</button>
-        <button onclick="collapseAll()">全部收合</button>
-</div>
+        <button onclick="toggleAll(true)">展開全部</button>
+        <button onclick="toggleAll(false)">全部收合</button>
+    </div>
 
 <!-- 第一章 -->
 <details class="chapter" id="ch1"><summary>第 一 章 總則</summary>
@@ -316,14 +310,11 @@
 </div>
 
 <script>
-    // 展開全部函式
-    function expandAll() {
-        document.querySelectorAll('details').forEach(d => d.open = true);
-    }
-
-    // 全部收合函式
-    function collapseAll() {
-        document.querySelectorAll('details').forEach(d => d.open = false);
+    function toggleAll(shouldOpen) {
+        const details = document.querySelectorAll('.chapter');
+        details.forEach(detail => {
+            detail.open = shouldOpen;
+        });
     }
 </script>
 
