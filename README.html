@@ -7,12 +7,9 @@
 <style>
     body { font-family: "Microsoft JhengHei", sans-serif; margin: 0; background: #f5f6fa; }
     .container { max-width: 800px; margin: 20px auto; padding: 20px; }
-    
     .header { text-align: center; margin-bottom: 20px; }
-    
     button { padding: 10px 15px; margin: 5px; border: none; border-radius: 8px; background: #1976d2; color: #fff; cursor: pointer; }
     button:hover { background: #1565c0; }
-    
     .chapter { border: 1px solid #ddd; border-radius: 8px; margin-top: 15px; background: #fff; overflow: hidden; }
     .chapter summary { padding: 15px; font-weight: bold; cursor: pointer; background: #eef4ff; list-style: none; }
     .chapter summary::after { content: ' ▼'; float: right; }
@@ -21,16 +18,6 @@
 </style>
 </head>
 <body>
-
-<div class="container">
-    <div class="header">
-        <h2>台灣美光記憶體股份有限公司企業工會章程</h2>
-    </div>
-
-    <div>
-        <button onclick="toggleAll(true)">展開全部</button>
-        <button onclick="toggleAll(false)">全部收合</button>
-    </div>
 
 <!-- 第一章 -->
 <details class="chapter" id="ch1"><summary>第 一 章 總則</summary>
@@ -313,8 +300,12 @@
 </div>
 
 <script>
-    function expandAll() { document.querySelectorAll('.chapter').forEach(d => d.open = true); }
-    function collapseAll() { document.querySelectorAll('.chapter').forEach(d => d.open = false); }
+    function toggleAll(shouldOpen) {
+        const details = document.querySelectorAll('.chapter');
+        details.forEach(detail => {
+            detail.open = shouldOpen;
+        });
+    }
 </script>
 
 </body>
