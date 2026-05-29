@@ -22,12 +22,13 @@
 </style>
 </head>
 <body>
-<div class="container">
-    <!-- 標題與 Logo 區塊 -->
-    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
-        <img src="S__42958893.jpg" alt="工會Logo" style="width: 80px; height: auto; object-fit: contain;">
-        <h2 style="margin: 0;">台灣美光記憶體股份有限公司企業工會章程</h2>
+<div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+    <!-- 新增一個固定寬高的容器來包裹圖片 -->
+    <div style="width: 80px; height: 80px; flex-shrink: 0; display: flex; align-items: center; justify-content: center;">
+        <img src="S__42958893.jpg" alt="工會Logo" style="max-width: 100%; max-height: 100%; object-fit: contain;">
     </div>
+    <h2 style="margin: 0;">台灣美光記憶體股份有限公司企業工會章程</h2>
+</div>
 
     <!-- 按鈕區塊 -->
     <div>
