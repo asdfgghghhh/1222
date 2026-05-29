@@ -1,33 +1,3 @@
-<!DOCTYPE html>
-<html lang="zh-Hant">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>台灣美光記憶體股份有限公司企業工會章程</title>
-<style>
-    body { font-family: "Microsoft JhengHei", sans-serif; margin: 0; background: #f5f6fa; display: flex; }
-    /* 側邊導覽列樣式 */
-    .sidebar { width: 220px; background: #fff; height: 100vh; position: fixed; border-right: 1px solid #ddd; padding: 20px; box-sizing: border-box; overflow-y: auto; }
-    .container { margin-left: 240px; width: calc(100% - 260px); padding: 20px; }
-    
-    button { padding: 10px 15px; margin: 5px; border: none; border-radius: 8px; background: #1976d2; color: #fff; cursor: pointer; }
-    button:hover { background: #1565c0; }
-    
-    .chapter { border: 1px solid #ddd; border-radius: 8px; margin-top: 15px; background: #fff; }
-    .chapter summary { padding: 15px; font-weight: bold; cursor: pointer; background: #eef4ff; border-radius: 8px; }
-    .article { padding: 10px 15px; border-top: 1px dashed #ddd; }
-    
-    .nav-link { display: block; padding: 8px 0; color: #333; text-decoration: none; font-size: 14px; }
-    .nav-link:hover { color: #1976d2; }
-</style>
-</head>
-<body>
-<div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
-    <!-- 新增一個固定寬高的容器來包裹圖片 -->
-    <div style="width: 80px; height: 80px; flex-shrink: 0; display: flex; align-items: center; justify-content: center;">
-        <img src="S__42958893.jpg" alt="工會Logo" style="max-width: 100%; max-height: 100%; object-fit: contain;">
-    </div>
-    <h2 style="margin: 0;">台灣美光記憶體股份有限公司企業工會章程</h2>
 </div>
 
     <!-- 按鈕區塊 -->
